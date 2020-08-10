@@ -27,11 +27,8 @@ jobs:
       run: echo Hello, world!
 
     # Runs a set of commands using the runners shell
-    
-    - name: before_script
-      run: pip3 install awscli --upgrade
-    - name: upgrade the sam cli
-      run: pip3 install aws-sam-cli --upgrade
-    
+    - name: run the command
+      run: npm run build && aws s3 sync build/ s3://newqaalive.com --acl public-read
+   
     
 
