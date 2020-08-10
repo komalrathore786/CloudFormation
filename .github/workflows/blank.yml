@@ -32,8 +32,6 @@ jobs:
       run: pip3 install awscli --upgrade
     - name: upgrade the sam cli
       run: pip3 install aws-sam-cli --upgrade
-    - name : script
-    - run: sam build
-    - run: sam package --output-template-file packaged.yaml --s3-bucket newqaalive.com
-    - run: sam deploy --template-file packaged.yaml --stack-name gitlab-example --s3-bucket newqaalive.com --capabilities CAPABILITY_IAM --region us-east-1
+    
+    
 
